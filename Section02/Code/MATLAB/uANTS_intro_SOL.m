@@ -15,11 +15,11 @@ load sampleEEGdata
 % What is the earliest and last time point?
 % Where is time = 0?
 % What is the sampling rate?
-EEG
+
 
 %% plot ERPs and topographical maps
 
-% compute the ERP of each channel 
+% compute the ERP of each channel
 % (remember that the ERP is the time-domain average across all trials at each time point)
 erp = mean(EEG.data,3);
 
@@ -40,7 +40,7 @@ time2plot = 300; % in ms
 [~,tidx] = min(abs(EEG.times-time2plot));
 
 figure(2), clf
-topoplotIndie(erp(:,tidx),EEG.chanlocs);
+topoplotIndieOctave(erp(:,tidx),EEG.chanlocs);
 title([ 'ERP from ' num2str(time2plot) ' ms' ])
 colorbar
 

@@ -89,16 +89,3 @@ def plot_simEEG(EEG, chan=1, fignum=1):
 
     plt.tight_layout()
     plt.show()
-
-
-# Example structure for testing
-EEG = {
-    'data': np.random.randn(3, 1000, 10),  # Example data: 3 channels, 1000 points, 10 trials
-    'times': np.linspace(-1, 1, 1000),
-    'srate': 1000,
-    'pnts': 1000,
-    'trials': 10
-}
-
-# Call the function with example data
-plot_simEEG(EEG, chan=1, fignum=1)
